@@ -27,8 +27,9 @@ def get_block(coor, grid):
 	grid = list(grid)
 	block = []
 
-	y = (coor[1] / 3) * 3
-	x = (coor[0] / 3) * 3
+	block_coor = get_block_coor(coor)
+	y = block_coor[1] * 3
+	x = block_coor[0] * 3
 
 	for yi in range(0, 3):
 		row = grid[y + yi]
